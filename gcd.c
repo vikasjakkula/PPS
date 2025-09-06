@@ -1,0 +1,2 @@
+// hcf of two numbers
+
