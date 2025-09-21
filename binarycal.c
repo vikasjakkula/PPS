@@ -1,29 +1,21 @@
 // Binary Calculator
 
 #include <stdio.h>
+
 int main() {
-    int decimal, num, i = 0, binary[32];
+    int a = 0, b = 1, c, num, i;
 
-    printf("Enter a decimal number greater than zero: ");
-    scanf("%d", &decimal);
+    printf("Enter number of terms: ");
+    scanf("%d", &num);
 
-    if (decimal <= 0) {
-        printf("Please enter a number greater than zero.\n");
-        return 1;
+    printf("Fibonacci Series: %d, %d", a, b);
+
+    for (i = 2; i < num; i++) {
+        c = a + b;
+        printf(", %d", c);
+        a = b;
+        b = c;
     }
-
-    num = decimal;
-    while (num > 0) {
-        binary[i] = num % 2;
-        num = num / 2;
-        i++;
-    }
-
-    printf("The binary number is: ");
-    for (int j = i - 1; j >= 0; j--) {
-        printf("%d", binary[j]);
-    }
-    printf("\n");
 
     return 0;
 }
