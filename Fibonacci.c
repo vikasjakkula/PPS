@@ -1,13 +1,14 @@
 #include <stdio.h>
 int main() {
-    int n, a = 0, b = 1, c;
-    printf("Enter a number: ");
+    int n, a=0, b=1, next;
+    printf("Enter no.of terms: ");
     scanf("%d", &n);
-    for(int i = 0; i < n; i++) {
-        printf("%d ", a);
-        c = a + b;
-        a = b;
-        b = c;
+    printf("Fibonacci Series: \n");
+    for(int i=1; i<n; i++){
+    printf(" %d", a);
+          next= a + b;
+          a= b;
+          b= next;
     }
     return 0;
 }
